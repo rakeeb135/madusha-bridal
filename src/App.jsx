@@ -139,7 +139,7 @@ export default function App() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#faf7f2] text-[#2b231d] selection:bg-[#c59d5f] selection:text-white">
+    <div className="min-h-screen bg-[#faf7f2] text-[#2b231d] selection:bg-[#c59d5f] selection:text-white pb-24 md:pb-0">
       
       {/* Luxury Gold Announcement Bar */}
       <div className="bg-[#1f1915] text-[#e8d5b5] text-[11px] sm:text-xs py-2.5 px-4 text-center tracking-[0.2em] uppercase font-medium flex items-center justify-center gap-2 border-b border-[#c59d5f]/20">
@@ -152,7 +152,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-24">
             
-            {/* Logo from public/logo.png */}
+            {/* Logo */}
             <a href="#" className="flex items-center gap-3.5 group">
               <img 
                 src="/logo.png" 
@@ -175,7 +175,7 @@ export default function App() {
               </div>
             </a>
 
-            {/* Desktop Nav */}
+            {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center gap-8 text-[13px] tracking-widest uppercase font-medium text-[#4a3f35]">
               <a href="#services" className="hover:text-[#a67c41] transition">Services</a>
               <a href="#reviews" className="hover:text-[#a67c41] transition">Bride Stories (5.0★)</a>
@@ -187,8 +187,8 @@ export default function App() {
                 rel="noreferrer"
                 className="flex items-center gap-2.5 bg-gradient-to-r from-[#b38b4d] to-[#966f33] hover:from-[#966f33] hover:to-[#7a5924] text-white px-6 py-3 rounded-full font-semibold transition shadow-md shadow-[#a67c41]/25 active:scale-95 text-[11px] tracking-[0.15em] uppercase"
               >
-                <MessageCircle className="w-4 h-4" />
-                Check Date on WhatsApp
+                <MessageCircle className="w-4 h-4 shrink-0" />
+                <span>Check Date on WhatsApp</span>
               </a>
             </div>
 
@@ -213,10 +213,10 @@ export default function App() {
               href={whatsappUrl("Hello Madusha De Silva Bridal Salon, I would like to check wedding date availability.")} 
               target="_blank" 
               rel="noreferrer"
-              className="flex items-center justify-center gap-2 bg-[#a67c41] text-white py-3.5 rounded-full font-bold text-xs uppercase tracking-widest mt-2"
+              className="flex items-center justify-center gap-2.5 bg-[#a67c41] text-white py-3.5 rounded-full font-bold text-xs uppercase tracking-widest mt-2"
             >
-              <MessageCircle className="w-4 h-4" />
-              Check Date on WhatsApp
+              <MessageCircle className="w-4 h-4 shrink-0" />
+              <span>Check Date on WhatsApp</span>
             </a>
           </div>
         )}
@@ -258,15 +258,15 @@ export default function App() {
                 rel="noreferrer"
                 className="w-full sm:w-auto flex items-center justify-center gap-3 bg-gradient-to-r from-[#b38b4d] to-[#966f33] hover:from-[#966f33] hover:to-[#7a5924] text-white font-semibold px-9 py-4 rounded-full shadow-xl shadow-[#a67c41]/30 transition active:scale-95 text-xs uppercase tracking-[0.18em]"
               >
-                <MessageCircle className="w-4 h-4" />
-                Reserve Bridal Consultation
+                <MessageCircle className="w-4 h-4 shrink-0" />
+                <span>Reserve Bridal Consultation</span>
               </a>
               <a 
                 href={`tel:${phone}`}
                 className="w-full sm:w-auto flex items-center justify-center gap-2.5 bg-white/90 hover:bg-white text-[#3d3128] border border-[#d6c3ad] px-8 py-4 rounded-full font-semibold transition text-xs uppercase tracking-[0.15em] shadow-xs"
               >
-                <Phone className="w-4 h-4 text-[#a67c41]" />
-                Call Salon: {phone}
+                <Phone className="w-4 h-4 text-[#a67c41] shrink-0" />
+                <span>Call Salon: {phone}</span>
               </a>
             </div>
 
@@ -347,8 +347,8 @@ export default function App() {
                     rel="noreferrer"
                     className="mt-8 w-full flex items-center justify-center gap-2 bg-[#2b231d] hover:bg-[#a67c41] text-white py-3.5 rounded-full font-semibold text-[11px] uppercase tracking-[0.18em] transition active:scale-95 shadow-xs"
                   >
-                    <MessageCircle className="w-3.5 h-3.5" />
-                    Inquire Package
+                    <MessageCircle className="w-3.5 h-3.5 shrink-0" />
+                    <span>Inquire Package</span>
                   </a>
                 </div>
               </div>
@@ -480,14 +480,14 @@ export default function App() {
                   rel="noreferrer"
                   className="inline-flex items-center gap-2.5 bg-[#faf7f2] hover:bg-[#f2eae0] text-[#423329] text-xs font-bold tracking-widest uppercase px-7 py-4 rounded-full border border-[#d6c7b6] transition"
                 >
-                  <MapPin className="w-4 h-4 text-[#a67c41]" />
-                  Open in Google Maps
+                  <MapPin className="w-4 h-4 text-[#a67c41] shrink-0" />
+                  <span>Open in Google Maps</span>
                 </a>
               </div>
             </div>
 
             {/* Direct Booking VIP Card */}
-            <div className="w-full lg:w-96 bg-[#1f1915] text-[#faf7f2] rounded-3xl p-9 text-center space-y-5 shadow-2xl border border-[#a67c41]/30">
+            <div className="w-full lg:w-96 bg-[#1f1915] text-[#faf7f2] rounded-3xl p-8 sm:p-9 text-center space-y-5 shadow-2xl border border-[#a67c41]/30">
               <p className="text-[10px] uppercase tracking-[0.25em] text-[#c59d5f] font-bold">Bridal Inquiries</p>
               <h4 className="font-serif-luxury text-2xl font-bold text-white">Reserve Your Wedding Date</h4>
               <p className="text-xs text-[#d6c7b6] leading-relaxed font-light">
@@ -497,10 +497,10 @@ export default function App() {
                 href={whatsappUrl("Hello Madusha De Silva Bridal Salon, I'd like to check wedding date availability.")}
                 target="_blank"
                 rel="noreferrer"
-                className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#b38b4d] to-[#966f33] hover:from-[#966f33] hover:to-[#7a5924] text-white font-bold py-4 rounded-full shadow-xl shadow-[#a67c41]/25 transition active:scale-95 text-xs uppercase tracking-[0.18em]"
+                className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#b38b4d] to-[#966f33] hover:from-[#966f33] hover:to-[#7a5924] text-white font-bold py-4 px-4 rounded-full shadow-xl shadow-[#a67c41]/25 transition active:scale-95 text-[11px] sm:text-xs uppercase tracking-wider"
               >
-                <MessageCircle className="w-4 h-4" />
-                Check Date on WhatsApp
+                <MessageCircle className="w-4 h-4 shrink-0" />
+                <span>Check Date on WhatsApp</span>
               </a>
             </div>
 
@@ -514,10 +514,10 @@ export default function App() {
           href={whatsappUrl("Hello Madusha De Silva Bridal, I'd like to check wedding date availability.")}
           target="_blank"
           rel="noreferrer"
-          className="w-full flex items-center justify-center gap-3 bg-gradient-to-r from-[#b38b4d] to-[#966f33] text-white font-bold py-4 px-6 rounded-full shadow-2xl border border-[#e5c99e]/40 active:scale-95 text-xs uppercase tracking-widest"
+          className="w-full flex items-center justify-center gap-2.5 bg-gradient-to-r from-[#b38b4d] to-[#966f33] text-white font-bold py-3.5 px-4 rounded-full shadow-2xl border border-[#e5c99e]/40 active:scale-95 text-[11px] uppercase tracking-wider"
         >
-          <MessageCircle className="w-4 h-4 fill-white text-[#966f33]" />
-          Check Wedding Date on WhatsApp
+          <MessageCircle className="w-4 h-4 fill-white text-[#966f33] shrink-0" />
+          <span>Check Wedding Date on WhatsApp</span>
         </a>
       </div>
 
