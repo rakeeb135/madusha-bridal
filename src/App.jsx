@@ -14,8 +14,7 @@ import {
   Flower2,
   Gem,
   Scissors,
-  Crown,
-  Instagram
+  Crown
 } from 'lucide-react';
 
 export default function App() {
@@ -24,7 +23,6 @@ export default function App() {
   const phone = "0772177070";
   const whatsappUrl = (msg) => `https://wa.me/94772177070?text=${encodeURIComponent(msg)}`;
 
-  // Authentic Sri Lankan / South Asian Luxury Bridal Photography CDN Fallbacks
   const fallbacks = {
     hero: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1920&q=80",
     kandyan: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80",
@@ -149,12 +147,12 @@ export default function App() {
         <span>Accepting 2026 & 2027 Wedding Bookings • 363 High Level Road, Nugegoda</span>
       </div>
 
-      {/* Sticky Haute Couture Navbar */}
+      {/* Sticky Navbar */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#faf7f2]/95 backdrop-blur-md border-b border-[#e8dfd5] shadow-xs">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-24">
             
-            {/* Logo from public/logo.png with fallback styling */}
+            {/* Logo from public/logo.png */}
             <a href="#" className="flex items-center gap-3.5 group">
               <img 
                 src="/logo.png" 
@@ -177,7 +175,7 @@ export default function App() {
               </div>
             </a>
 
-            {/* Desktop Navigation */}
+            {/* Desktop Nav */}
             <div className="hidden lg:flex items-center gap-8 text-[13px] tracking-widest uppercase font-medium text-[#4a3f35]">
               <a href="#services" className="hover:text-[#a67c41] transition">Services</a>
               <a href="#reviews" className="hover:text-[#a67c41] transition">Bride Stories (5.0★)</a>
@@ -212,7 +210,7 @@ export default function App() {
             <a href="#gallery" onClick={() => setMobileMenuOpen(false)} className="text-[#2b231d] py-1">Portfolio</a>
             <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="text-[#2b231d] py-1">Location & Contact</a>
             <a 
-              href={whatsappUrl("Hello Madusha De Silva Bridal Salon, I would like to check wedding date availability.")}
+              href={whatsappUrl("Hello Madusha De Silva Bridal Salon, I would like to check wedding date availability.")} 
               target="_blank" 
               rel="noreferrer"
               className="flex items-center justify-center gap-2 bg-[#a67c41] text-white py-3.5 rounded-full font-bold text-xs uppercase tracking-widest mt-2"
@@ -226,13 +224,11 @@ export default function App() {
 
       {/* Hero Section */}
       <section className="relative pt-36 pb-24 md:pt-48 md:pb-36 overflow-hidden">
-        {/* Soft Ambient Rose/Gold Glows */}
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[450px] bg-gradient-to-tr from-[#edd6b6]/40 via-[#f7e8d5]/30 to-[#fceee9]/50 blur-3xl -z-10 rounded-full pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
             
-            {/* 5.0 Google Badge */}
             <div className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-white/90 border border-[#e5d5c0] mb-8 shadow-xs backdrop-blur-sm">
               <div className="flex text-[#d4a038]">
                 {[...Array(5)].map((_, i) => (
@@ -244,7 +240,6 @@ export default function App() {
               </span>
             </div>
 
-            {/* Main Headline */}
             <h1 className="font-serif-luxury text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-[#241c17] leading-[1.12]">
               Timeless Elegance. <br />
               <span className="font-editorial italic font-normal text-[#a67c41] block mt-1 sm:mt-2">
@@ -256,7 +251,6 @@ export default function App() {
               Crafting Sri Lanka's most radiant brides through bespoke Kandyan dressing, European romantic aesthetics, flawless long-wear HD makeup, and artisan fresh floral creations.
             </p>
 
-            {/* Primary Action Buttons */}
             <div className="mt-10 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
               <a 
                 href={whatsappUrl("Hello Madusha De Silva Bridal, I'd like to book a one-on-one bridal consultation for my wedding.")}
@@ -276,7 +270,6 @@ export default function App() {
               </a>
             </div>
 
-            {/* Verified Statistics */}
             <div className="mt-16 grid grid-cols-3 gap-6 sm:gap-12 border-t border-[#e8ddcf] pt-10 w-full max-w-xl">
               <div>
                 <p className="font-serif-luxury text-2xl sm:text-4xl font-bold text-[#241c17]">25K+</p>
@@ -317,7 +310,6 @@ export default function App() {
                 key={idx}
                 className="bg-[#faf7f2] border border-[#e8dfd5] rounded-2xl overflow-hidden flex flex-col justify-between hover:border-[#a67c41]/60 hover:shadow-2xl transition duration-300 group"
               >
-                {/* Image Frame */}
                 <div className="h-64 w-full overflow-hidden relative bg-[#eee6db]">
                   <img 
                     src={item.localImg} 
@@ -393,7 +385,7 @@ export default function App() {
                   <div className="flex items-center justify-between gap-2 mb-5">
                     <div className="flex text-[#d4a038]">
                       {[...Array(5)].map((_, s) => (
-                        <Star key={s} className="w-3.5 h-3.5 fill-[#d4a038]" />
+                        <Star key={s} className="w-4 h-4 fill-[#d4a038]" />
                       ))}
                     </div>
                     <span className="text-[9px] uppercase tracking-widest bg-[#f7efe4] text-[#8a632b] px-3 py-1 rounded-full font-bold">
