@@ -22,6 +22,7 @@ export default function App() {
   const phone = "0772177070";
   const whatsappUrl = (msg) => `https://wa.me/94772177070?text=${encodeURIComponent(msg)}`;
 
+  // Default online fallbacks if local public/ files are absent
   const fallbacks = {
     hero: "https://images.unsplash.com/photo-1594552072238-b8a33785b261?auto=format&fit=crop&w=1920&q=80",
     kandyan: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80",
@@ -140,20 +141,31 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#fffcfc] text-[#2c2420] selection:bg-rose-500 selection:text-white">
       
-      {/* Top Announcement Bar */}
+      {/* Top Notification Bar */}
       <div className="bg-[#2a2220] text-rose-100 text-xs py-2 px-4 text-center font-medium tracking-wide flex items-center justify-center gap-2">
         <Sparkles className="w-3.5 h-3.5 text-rose-300 animate-pulse" />
         <span>Now Accepting Bridal Bookings • 363 High Level Road, Nugegoda</span>
       </div>
 
-      {/* Sticky Rose/White Navbar */}
+      {/* Sticky Navbar */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-rose-100 shadow-xs">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             
             {/* Logo */}
             <a href="#" className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-rose-50 border border-rose-200 flex items-center justify-center text-rose-600 font-serif font-bold text-lg">
+              <img 
+                src="/logo.png" 
+                alt="Madusha De Silva Logo" 
+                className="h-11 w-auto object-contain rounded-md"
+                onError={(e) => {
+                  e.target.onerror = null;
+                  e.target.style.display = 'none';
+                  const fallbackEl = document.getElementById('bridal-logo-fallback');
+                  if (fallbackEl) fallbackEl.style.display = 'flex';
+                }}
+              />
+              <div id="bridal-logo-fallback" style={{ display: 'none' }} className="w-10 h-10 rounded-full bg-rose-50 border border-rose-200 items-center justify-center text-rose-600 font-serif font-bold text-lg">
                 M
               </div>
               <div className="flex flex-col">
